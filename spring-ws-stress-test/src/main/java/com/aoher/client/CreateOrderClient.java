@@ -1,0 +1,34 @@
+package com.aoher.client;
+
+import com.aoher.types.order.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.ws.client.core.WebServiceTemplate;
+
+@Component
+public class CreateOrderClient {
+
+    private static final Logger log = LoggerFactory.getLogger(CreateOrderClient.class);
+
+    @Autowired
+    private WebServiceTemplate webServiceTemplate;
+
+    public OrderConfirmation createOrder(CustomerType customer, LineItemsType lineItems) {
+        ObjectFactory factory = new ObjectFactory();
+        Order order = factory.createOrder();
+
+        order.setCustomer(customer);
+        order.setLineItems(lineItems);
+
+        log.info("Client sending order for Customer[firstName={},lastName={}]",
+                customer.getFirstName(), customer.getLastName());
+
+        OrderConfirmation orderConfirmation = (OrderConfirmation) webServiceTemplate.marshalSendAndReceive(order);
+
+        log.info("Client received orderConfirmationId='{}'",
+                orderConfirmation.getConfirmationId());
+        return orderConfirmation;
+    }
+}
