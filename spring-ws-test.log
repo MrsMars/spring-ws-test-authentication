@@ -1,0 +1,757 @@
+2020-02-14 11:21:57.306  INFO 11928 --- [main] com.com.aoher.App                            : Starting App on oher with PID 11928 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 11:21:57.311  INFO 11928 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 11:21:58.226  INFO 11928 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$5c40c8f0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:21:58.229  INFO 11928 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$fd4e5e00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:21:58.285  INFO 11928 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 11:21:58.632  INFO 11928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 11:21:58.643  INFO 11928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 11:21:58.643  INFO 11928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 11:21:58.716  INFO 11928 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 11:21:58.718  INFO 11928 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1325 ms
+2020-02-14 11:21:58.788  INFO 11928 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 11:21:58.815  WARN 11928 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2020-02-14 11:21:58.820  INFO 11928 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-14 11:21:58.833  INFO 11928 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-14 11:21:58.840 ERROR 11928 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at com.com.aoher.App.main(App.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:394) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:366) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$274a030.jaxb2Marshaller(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig.webServiceTemplate(ClientConfig.java:28) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$274a030.CGLIB$webServiceTemplate$0(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$274a030$$FastClassBySpringCGLIB$$c0541acc.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$274a030.webServiceTemplate(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 33 common frames omitted
+Caused by: org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.convertJaxbException(Jaxb2Marshaller.java:955) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:514) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.afterPropertiesSet(Jaxb2Marshaller.java:480) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 53 common frames omitted
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:131) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:318) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:478) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:435) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.createJaxbContextFromContextPath(Jaxb2Marshaller.java:537) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:500) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 56 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:92) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:125) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:128) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	... 61 common frames omitted
+
+2020-02-14 11:28:45.814  INFO 21460 --- [main] com.com.aoher.App                            : Starting App on oher with PID 21460 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 11:28:45.820  INFO 21460 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 11:28:46.700  INFO 21460 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$e70234ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:28:46.703  INFO 21460 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$880fc9ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:28:46.764  INFO 21460 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 11:28:47.133  INFO 21460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 11:28:47.147  INFO 21460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 11:28:47.147  INFO 21460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 11:28:47.226  INFO 21460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 11:28:47.227  INFO 21460 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1333 ms
+2020-02-14 11:28:47.293  INFO 21460 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 11:28:47.315  WARN 21460 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2020-02-14 11:28:47.318  INFO 21460 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-14 11:28:47.329  INFO 21460 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-14 11:28:47.335 ERROR 21460 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at com.com.aoher.App.main(App.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:394) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:366) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$8d360bfa.jaxb2Marshaller(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig.webServiceTemplate(ClientConfig.java:28) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$8d360bfa.CGLIB$webServiceTemplate$1(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$8d360bfa$$FastClassBySpringCGLIB$$1dca26b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$8d360bfa.webServiceTemplate(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 33 common frames omitted
+Caused by: org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.convertJaxbException(Jaxb2Marshaller.java:955) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:514) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.afterPropertiesSet(Jaxb2Marshaller.java:480) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 53 common frames omitted
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:131) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:318) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:478) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:435) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.createJaxbContextFromContextPath(Jaxb2Marshaller.java:537) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:500) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 56 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:92) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:125) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:128) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	... 61 common frames omitted
+
+2020-02-14 11:31:51.832  INFO 21952 --- [main] com.com.aoher.App                            : Starting App on oher with PID 21952 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 11:31:51.837  INFO 21952 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 11:31:52.835  INFO 21952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$6bf213d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:31:52.837  INFO 21952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$cffa8e4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:31:52.891  INFO 21952 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 11:31:53.230  INFO 21952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 11:31:53.240  INFO 21952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 11:31:53.241  INFO 21952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 11:31:53.318  INFO 21952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 11:31:53.319  INFO 21952 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1385 ms
+2020-02-14 11:31:53.379  INFO 21952 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 11:31:53.403  WARN 21952 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2020-02-14 11:31:53.406  INFO 21952 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-14 11:31:53.420  INFO 21952 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-14 11:31:53.428 ERROR 21952 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at com.com.aoher.App.main(App.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/config/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:394) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:366) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$1225eb14.jaxb2Marshaller(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig.webServiceTemplate(ClientConfig.java:28) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$1225eb14.CGLIB$webServiceTemplate$0(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$1225eb14$$FastClassBySpringCGLIB$$d411f693.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$1225eb14.webServiceTemplate(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 33 common frames omitted
+Caused by: org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.convertJaxbException(Jaxb2Marshaller.java:955) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:514) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.afterPropertiesSet(Jaxb2Marshaller.java:480) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 53 common frames omitted
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:131) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:318) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:478) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:435) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.createJaxbContextFromContextPath(Jaxb2Marshaller.java:537) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:500) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 56 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:92) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:125) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:128) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	... 61 common frames omitted
+
+2020-02-14 11:34:05.165  INFO 15952 --- [main] com.com.aoher.App                            : Starting App on oher with PID 15952 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 11:34:05.169  INFO 15952 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 11:34:06.078  INFO 15952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$a40958a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:34:06.080  INFO 15952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$95ff59fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:34:06.133  INFO 15952 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 11:34:06.491  INFO 15952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 11:34:06.502  INFO 15952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 11:34:06.502  INFO 15952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 11:34:06.585  INFO 15952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 11:34:06.586  INFO 15952 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1340 ms
+2020-02-14 11:34:06.649  INFO 15952 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 11:34:06.670  WARN 15952 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2020-02-14 11:34:06.673  INFO 15952 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-14 11:34:06.687  INFO 15952 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-14 11:34:06.693 ERROR 15952 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at com.com.aoher.App.main(App.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:394) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:366) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$a622ddbd.jaxb2Marshaller(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig.webServiceTemplate(ClientConfig.java:28) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$a622ddbd.CGLIB$webServiceTemplate$0(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$a622ddbd$$FastClassBySpringCGLIB$$937fb114.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$a622ddbd.webServiceTemplate(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 33 common frames omitted
+Caused by: org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.convertJaxbException(Jaxb2Marshaller.java:955) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:514) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.afterPropertiesSet(Jaxb2Marshaller.java:480) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 53 common frames omitted
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:131) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:318) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:478) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:435) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.createJaxbContextFromContextPath(Jaxb2Marshaller.java:537) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:500) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 56 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:92) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:125) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:128) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	... 61 common frames omitted
+
+2020-02-14 11:34:57.039  INFO 19232 --- [main] com.com.aoher.App                            : Starting App on oher with PID 19232 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 11:34:57.044  INFO 19232 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 11:34:57.948  INFO 19232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$ab7c3ea0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:34:57.950  INFO 19232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$9d723ff2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:34:58.004  INFO 19232 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 11:34:58.367  INFO 19232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 11:34:58.380  INFO 19232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 11:34:58.380  INFO 19232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 11:34:58.453  INFO 19232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 11:34:58.455  INFO 19232 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1351 ms
+2020-02-14 11:34:58.524  INFO 19232 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 11:34:58.544  WARN 19232 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2020-02-14 11:34:58.547  INFO 19232 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-14 11:34:58.559  INFO 19232 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-14 11:34:58.565 ERROR 19232 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at com.com.aoher.App.main(App.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:394) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:366) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$ad95c3b4.jaxb2Marshaller(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig.webServiceTemplate(ClientConfig.java:28) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$ad95c3b4.CGLIB$webServiceTemplate$0(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$ad95c3b4$$FastClassBySpringCGLIB$$20f95d1e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$ad95c3b4.webServiceTemplate(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 33 common frames omitted
+Caused by: org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.convertJaxbException(Jaxb2Marshaller.java:955) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:514) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.afterPropertiesSet(Jaxb2Marshaller.java:480) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 53 common frames omitted
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:131) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:318) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:478) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:435) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.createJaxbContextFromContextPath(Jaxb2Marshaller.java:537) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:500) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 56 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:92) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:125) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:128) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	... 61 common frames omitted
+
+2020-02-14 11:37:10.218  INFO 4340 --- [main] com.com.aoher.App                            : Starting App on oher with PID 4340 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 11:37:10.222  INFO 4340 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 11:37:11.579  INFO 4340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$fca83adf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:37:11.588  INFO 4340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee9e3c31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:37:11.851  INFO 4340 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 11:37:13.371  INFO 4340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 11:37:13.421  INFO 4340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 11:37:13.422  INFO 4340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 11:37:13.800  INFO 4340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 11:37:13.801  INFO 4340 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3506 ms
+2020-02-14 11:37:14.230  INFO 4340 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 11:37:14.427  WARN 4340 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2020-02-14 11:37:14.441  INFO 4340 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-14 11:37:14.573  INFO 4340 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-14 11:37:14.601 ERROR 4340 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderClient': Unsatisfied dependency expressed through field 'webServiceTemplate'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
+	at com.com.aoher.App.main(App.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webServiceTemplate' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ws.client.core.WebServiceTemplate]: Factory method 'webServiceTemplate' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jaxb2Marshaller' defined in class path resource [com/com.aoher/client/ClientConfig.class]: Invocation of init method failed; nested exception is org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:394) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:366) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$fec1bff3.jaxb2Marshaller(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig.webServiceTemplate(ClientConfig.java:28) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$fec1bff3.CGLIB$webServiceTemplate$0(<generated>) ~[classes/:na]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$fec1bff3$$FastClassBySpringCGLIB$$a4b8f05b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at com.com.com.aoher.client.config.ClientConfig$$EnhancerBySpringCGLIB$$fec1bff3.webServiceTemplate(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 33 common frames omitted
+Caused by: org.springframework.oxm.UncategorizedMappingException: Unknown JAXB exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.convertJaxbException(Jaxb2Marshaller.java:955) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:514) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.afterPropertiesSet(Jaxb2Marshaller.java:480) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 53 common frames omitted
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:131) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:318) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:478) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:435) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.createJaxbContextFromContextPath(Jaxb2Marshaller.java:537) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.oxm.jaxb.Jaxb2Marshaller.getJaxbContext(Jaxb2Marshaller.java:500) ~[spring-oxm-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 56 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:92) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:125) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:128) ~[jakarta.xml.bind-api-2.3.2.jar:2.3.2]
+	... 61 common frames omitted
+
+2020-02-14 11:38:28.748  INFO 19964 --- [main] com.com.aoher.App                            : Starting App on oher with PID 19964 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 11:38:28.753  INFO 19964 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 11:38:29.735  INFO 19964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$18a693e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:38:29.738  INFO 19964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$a9c953b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:38:29.787  INFO 19964 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 11:38:30.141  INFO 19964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 11:38:30.151  INFO 19964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 11:38:30.151  INFO 19964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 11:38:30.241  INFO 19964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 11:38:30.241  INFO 19964 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1419 ms
+2020-02-14 11:38:30.299  INFO 19964 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 11:38:30.610  INFO 19964 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-14 11:38:30.813  INFO 19964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2020-02-14 11:38:30.818  INFO 19964 --- [main] com.com.aoher.App                            : Started App in 2.646 seconds (JVM running for 3.184)
+2020-02-14 11:38:58.071  INFO 19964 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring MessageDispatcherServlet 'messageDispatcherServlet'
+2020-02-14 11:38:58.072  INFO 19964 --- [http-nio-9090-exec-2] o.s.w.t.http.MessageDispatcherServlet    : Initializing Servlet 'messageDispatcherServlet'
+2020-02-14 11:38:58.074  INFO 19964 --- [http-nio-9090-exec-2] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 11:38:58.080  INFO 19964 --- [http-nio-9090-exec-2] o.s.w.t.http.MessageDispatcherServlet    : Completed initialization in 8 ms
+2020-02-14 11:38:58.188  INFO 19964 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-14 11:38:58.188  INFO 19964 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-14 11:38:58.196  INFO 19964 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-02-14 12:08:39.624  INFO 21612 --- [main] com.com.aoher.App                            : Starting App on oher with PID 21612 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 12:08:39.634  INFO 21612 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 12:08:40.572  INFO 21612 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$4d361730] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 12:08:40.575  INFO 21612 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee43ac40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 12:08:40.628  INFO 21612 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 12:08:40.978  INFO 21612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 12:08:40.991  INFO 21612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 12:08:40.991  INFO 21612 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 12:08:41.068  INFO 21612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 12:08:41.068  INFO 21612 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1360 ms
+2020-02-14 12:08:41.129  INFO 21612 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 12:08:41.403  INFO 21612 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-14 12:08:41.565  INFO 21612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2020-02-14 12:08:41.569  INFO 21612 --- [main] com.com.aoher.App                            : Started App in 2.506 seconds (JVM running for 2.985)
+2020-02-14 12:08:57.288  INFO 20964 --- [main] com.com.aoher.App                            : Starting App on oher with PID 20964 (C:\Users\Oher_AI\IdeaProjects\spring-ws\spring-ws-unit-test\target\classes started by Oher_AI in C:\Users\Oher_AI\IdeaProjects\spring-ws)
+2020-02-14 12:08:57.297  INFO 20964 --- [main] com.com.aoher.App                            : No active profile set, falling back to default profiles: default
+2020-02-14 12:08:58.193  INFO 20964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'webServiceConfig' of type [com.com.aoher.endpoint.config.WebServiceConfig$$EnhancerBySpringCGLIB$$9c8d309e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 12:08:58.195  INFO 20964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$3d9ac5ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 12:08:58.251  INFO 20964 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2020-02-14 12:08:58.674  INFO 20964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-02-14 12:08:58.686  INFO 20964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 12:08:58.686  INFO 20964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-14 12:08:58.768  INFO 20964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 12:08:58.769  INFO 20964 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1405 ms
+2020-02-14 12:08:58.832  INFO 20964 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2020-02-14 12:08:59.109  INFO 20964 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-14 12:08:59.274  INFO 20964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2020-02-14 12:08:59.278  INFO 20964 --- [main] com.com.aoher.App                            : Started App in 2.499 seconds (JVM running for 3.007)
